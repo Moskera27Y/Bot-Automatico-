@@ -1,0 +1,32 @@
+# Secrets y credenciales (NUNCA subir)
+.env
+client_secrets.json
+token.pickle
+token_v2.pickle
+tiktok_token.json
+voz_referencia.wav
+Voz*.mp3
+
+# Generados / cache
+output/
+temp_frames/
+fondos/
+escudos/
+avatares/
+dist/
+build/
+*.spec
+__pycache__/
+*.log
+*.mp3
+*.mp4
+*.png
+!logo_kalador.png
+!logo_kalador_1024.png
+!banner_kalador.png
+!musica/*.mp3
+!sfx/*.ogg
+
+# Estado local
+estado.json
+run_log.txt

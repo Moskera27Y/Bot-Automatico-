@@ -1,0 +1,21 @@
+COMO GRABAR TU VOZ DE REFERENCIA (5 min, una sola vez)
+=====================================================
+El clon necesita escucharte para imitarte. Sin este archivo usa voz generica.
+
+1. Con el movil o PC, en un cuarto silencioso (sin eco, sin ventilador):
+   - Lee en voz alta, tono natural de video, 1 a 2 minutos en ESPANOL.
+   - Puedes leer cualquier guion de output\ o este texto:
+     "Hola, soy Kalador. Te cuento lo que esta pasando hoy, con lo mas
+      importante primero. Quedate hasta el final, porque el ultimo dato
+      es el que nadie te cuenta. Comenta tu opinion, quiero leerte."
+2. Sin musica de fondo, sin cortes, una sola toma.
+3. Pasa el archivo a esta carpeta y renombralo a: voz_referencia.wav
+   (Si quedo .m4a o .mp3, igual sirve: renombralo igual, el bot lo lee.)
+4. Prueba: python -c "from bot_clon import clonar_voz; clonar_voz('Hola, soy Kalador. Esta es mi voz clonada.','output/test_clon.mp3')"
+5. Escucha output\test_clon.mp3. Si suena bien, listo: todos los videos
+   usaran tu voz automaticamente.
+
+NOTAS
+- Mejor calidad = mejor clon: microfono cerca (15 cm), sin ruido.
+- No necesitas regrabar nunca mas (salvo que quieras cambiar el estilo).
+- Todo corre en tu PC: tu voz no se sube a ningun servidor.

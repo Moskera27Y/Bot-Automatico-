@@ -1,0 +1,26 @@
+PUBLICAR TAMBIEN EN TIKTOK (10 min, una sola vez)
+==================================================
+El bot sube el mismo mp4 a TikTok. Dos modos:
+  draft  = llega a tu bandeja de TikTok, lo publicas con 2 toques (SIN auditoria)
+  direct = publica solo (exige app auditada por TikTok; si no, queda privado)
+
+PASO 1 - Crear la app (gratis)
+  1. Entra a https://developers.tiktok.com/ con tu cuenta de TikTok
+  2. Manage apps > Create app > nombre "KALADOR" > categoria Entertainment
+  3. Products > agrega "Content Posting API"
+  4. Scopes: marca user.info.basic, video.upload, video.publish
+  5. Guarda el Client key y Client secret
+
+PASO 2 - Guardar credenciales en .env
+  TIKTOK_CLIENT_KEY=tu_client_key
+  TIKTOK_CLIENT_SECRET=tu_client_secret
+  TIKTOK_MODO=draft   (cambia a direct cuando TikTok audite tu app)
+
+PASO 3 - Autorizar (una vez)
+  python bot_tiktok.py auth
+  1) Abre la URL que muestra, autoriza en TikTok
+  2) Pega el ?code= que devuelve
+  Se guarda tiktok_token.json (no lo compartas)
+
+LISTO: cada video de YouTube tambien sube a TikTok automaticamente.
+Si falla, YouTube sigue funcionando igual (el aviso WPP te dice que paso).
