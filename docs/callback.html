@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KALADOR — Autorización TikTok</title>
+<style>body{background:#0b0620;color:#fff;font-family:Arial,sans-serif;padding:40px 20px;max-width:720px;margin:auto;text-align:center}h1{color:#ffc800}.code{background:#150b33;border:2px solid #ffc800;border-radius:12px;padding:20px;font-size:18px;word-break:break-all;user-select:all;margin:20px 0}.err{color:#ff6b6b}</style>
+</head>
+<body>
+<h1>KALADOR</h1>
+<div id="box"><p>Procesando autorización...</p></div>
+<script>
+const q = new URLSearchParams(location.search);
+const box = document.getElementById("box");
+if (q.get("code")) {
+  box.innerHTML = "<p>✅ Autorizado. Copia este código y pégalo en el bot:</p><div class='code'>" +
+    q.get("code") + "</div><p>Puedes cerrar esta pestaña.</p>";
+} else {
+  box.innerHTML = "<p class='err'>❌ Sin código. Error: " +
+    (q.get("error_description") || q.get("error") || "desconocido") + "</p>";
+}
+</script>
+</body>
+</html>
