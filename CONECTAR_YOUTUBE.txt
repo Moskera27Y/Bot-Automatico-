@@ -1,0 +1,16 @@
+CONECTAR YOUTUBE (una sola vez)
+==============================
+1. Google Cloud Console (console.cloud.google.com) con tu cuenta de YouTube:
+   - Proyecto > APIs y servicios > Biblioteca > "YouTube Data API v3" > Habilitar
+2. Pantalla de consentimiento OAuth: tipo Externo, nombre "KALADOR", tu email.
+   Agrega tu email en Usuarios de prueba. Publica la app si puedes.
+3. Credenciales > Crear > ID de cliente OAuth > App de escritorio > Descargar JSON.
+4. Renombra a client_secrets.json y ponlo en esta carpeta.
+5. Ejecuta cualquier video: se abre el navegador, aceptas (scopes: subir + lectura
+   para estadisticas) y se crea token_v2.pickle. Listo para siempre.
+6. Verifica: python check_api.py  ->  LISTO PARA SUBIR
+
+NOTAS
+- Cuota gratis: ~6 subidas/dia. Al agotarse, el bot duerme hasta manana y avisa por WPP.
+- Si cambias de cuenta: borra token_v2.pickle y repite el paso 5.
+- Privacidad inicial recomendada en config.json: "private" para probar, luego "public".
